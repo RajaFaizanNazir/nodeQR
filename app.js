@@ -39,7 +39,7 @@ app.use((error, req, res, next) => {
 });
 /**************************************** */
 app.listen(5000, () => {
-    if (!process.env.PORT) console.clear();
-    console.log("Server is up port " + (process.env.PORT || 5000));
-  });
+  if (!process.env.PORT) console.clear();
+  console.log("Server is up port " + (process.env.PORT || 5000));
+});
 /**************************************** */
