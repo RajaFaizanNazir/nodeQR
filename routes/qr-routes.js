@@ -4,7 +4,7 @@ const qrController = require("../controllers/qr-controllers");
 /**************************************** */
 const router = express.Router();
 /**************************************** */
-router.get("/users", qrController.getQr);
+router.get("/getQr", qrController.getQr);
 /**************************************** */
 module.exports = router;
 /**************************************** */

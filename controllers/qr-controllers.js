@@ -2,12 +2,11 @@ const HttpError = require("../util/http-error");
 const QRCode = require("qrcode");
 /**************************************** */
 const getQr = async (req, res, next) => {
+  let qrStr;
   // Creating the data
   let data = {
-    name: "Employee Name",
-    age: 27,
-    department: "Police",
-    id: "aisuoiqu3234738jdhf100223",
+    userId: "564",
+    id: "muhhammad.ahsan@fenrispakistan.com",
   };
 
   // Converting the data into String format
@@ -19,6 +18,7 @@ const getQr = async (req, res, next) => {
 
     // Printing the generated code
     console.log(QRcode);
+    // res.status(200).json({ QRcode });
   });
 
   // Converting the data into base64
@@ -26,9 +26,9 @@ const getQr = async (req, res, next) => {
     if (err) return console.log("error occurred");
 
     // Printing the code
-    console.log(code);
+    // console.log(code);
+    res.status(200).json({ code });
   });
-  res.status(200).json({ users: "hello" });
 };
 
 /**************************************** */
