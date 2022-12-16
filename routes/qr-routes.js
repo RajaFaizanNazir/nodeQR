@@ -1,10 +1,10 @@
 const express = require("express");
 /**************************************** */
-const usersController = require("../controllers/users-controllers");
+const qrController = require("../controllers/qr-controllers");
 /**************************************** */
 const router = express.Router();
 /**************************************** */
-router.get("/users", usersController.getUsers);
+router.get("/users", qrController.getQr);
 /**************************************** */
 module.exports = router;
 /**************************************** */
